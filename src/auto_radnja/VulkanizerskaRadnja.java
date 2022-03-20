@@ -19,7 +19,7 @@ public class VulkanizerskaRadnja implements Radnja {
 
 			throw new RuntimeException("Guma vec postoji");
 
-		gume.addFirst(a);
+		gume.add(a);
 }
 
 	@Override
