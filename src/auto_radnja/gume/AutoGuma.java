@@ -76,7 +76,7 @@ public class AutoGuma {
 	 */
 	public void setMarkaModel(String markaModel) {
 
-		if (markaModel==null)
+		if (markaModel == null)
 
 			throw new NullPointerException("Morate uneti marku i model");
 
@@ -111,7 +111,7 @@ public class AutoGuma {
 	 */
 	public void setPrecnik(int precnik) {
 
-		if (precnik < 13 && precnik > 22)
+		if (precnik > 22 || precnik < 13)
 
 			throw new IllegalArgumentException("Precnik van opsega");
 
@@ -140,7 +140,7 @@ public class AutoGuma {
 	 */
 	public void setSirina(int sirina) {
 
-		if (sirina < 135 && sirina > 355)
+		if (sirina > 355 || sirina < 135)
 
 			throw new IllegalArgumentException("Sirina van opsega");
 
@@ -169,7 +169,7 @@ public class AutoGuma {
 	 */
 	public void setVisina(int visina) {
 
-		if (visina < 25 || visina > 95)
+		if (visina > 95 || visina < 25)
 
 			throw new IllegalArgumentException("Visina van opsega");
 
