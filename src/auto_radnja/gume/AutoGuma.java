@@ -1,16 +1,47 @@
 package auto_radnja.gume;
 
+/**
+ * Klasa koja predstavlja gumu na tocku automobila.
+ * 
+ * AutoGuma ima precnik, sirinu i visinu kao int vrednosti, kao i markoModel kao String vrednost.
+ *
+ * 
+ * @author Mihailo Sljuka
+ * @version 0.1
+ */
 public class AutoGuma {
-	
+	/**
+	 * Marka i model automobila kao String.
+	 */
 	private String markaModel = null;
+	/**
+	 * Precnik gume kao int.
+	 */
 	private int precnik = -1;
+	/**
+	 * Sirina gume kao int.
+	 */
 	private int sirina = -1;
+	/**
+	 * Visina gume kao int.
+	 */
 	private int visina = -1;
 
+	/**
+	 * Kostruktor koji inicijalizuje objekat.
+	 */
 	public AutoGuma() {
 		
 	}
 
+	/**
+	 * Konstruktor koji inicijalizuje objekat i postavlja vrednosti za marku i model, precnik, sirinu i visinu gume.
+	 * 
+	 * @param markaModel Marka i model gume kao String.
+	 * @param precnik Precnik gume kao int.
+	 * @param sirina Sirina gume kao int.
+	 * @param visina Visina gume kao int.
+	 */
 	public AutoGuma(String markaModel, int precnik, int sirina, int visina) {
 
 		super();
@@ -22,14 +53,27 @@ public class AutoGuma {
 		setSirina(sirina);
 
 		setVisina(visina);
-}
+	}
 
+	/**
+	 * Vraca marku i model gume kao String.
+	 * 
+	 * @return Marka i model gume kao String.
+	 */
 	public String getMarkaModel() {
 
 		return markaModel;
 
 	}
-
+	
+	/**
+	 * Postavlja marku i model gume na novu vrednost.
+	 * 
+	 * @param markaModel Marka i model gume kao String.
+	 * 
+	 * @throws java.lang.NullPointerException Ako je uneta marka i model null.
+	 * @throws java.lang.IllegalArgumentException Ako je uneta marka i model kraca od 3 karaktera.
+	 */
 	public void setMarkaModel(String markaModel) {
 
 		if (markaModel==null)
@@ -45,13 +89,26 @@ public class AutoGuma {
 		this.markaModel = markaModel;
 
 	}
-
+	
+	/**
+	 * Vraca precnik gume kao int.
+	 * 
+	 * @return Precnik gume kao int.
+	 */
 	public int getPrecnik() {
 
 		return precnik;
 
 	}
-
+	
+	/**
+	 * Postavlja precnik gume na novu vrednost.
+	 * 
+	 * @param precnik Precnik gume kao String.
+	 * 
+	 * 
+	 * @throws java.lang.IllegalArgumentException Ako je unet precnik manji od 13 ili veci od 22.
+	 */
 	public void setPrecnik(int precnik) {
 
 		if (precnik < 13 && precnik > 22)
@@ -61,13 +118,26 @@ public class AutoGuma {
 		this.precnik = precnik;
 
 	}
-
+	
+	/**
+	 * Vraca sirinu gume kao int.
+	 * 
+	 * @return Sirina gume kao int.
+	 */
 	public int getSirina() {
 
 		return sirina;
 
 	}
-
+	
+	/**
+	 * Postavlja sirinu gume na novu vrednost.
+	 * 
+	 * @param sirina Sirina gume kao String.
+	 * 
+	 * 
+	 * @throws java.lang.IllegalArgumentException Ako je uneta sirina manja od 135 ili veca od 355.
+	 */
 	public void setSirina(int sirina) {
 
 		if (sirina < 135 && sirina > 355)
@@ -77,13 +147,26 @@ public class AutoGuma {
 		this.sirina = sirina;
 
 	}
-
+	
+	/**
+	 * Vraca visinu gume kao int.
+	 * 
+	 * @return Visina gume kao int.
+	 */
 	public int getVisina() {
 
 		return visina;
 
 	}
-
+	
+	/**
+	 * Postavlja visinu gume na novu vrednost.
+	 * 
+	 * @param visina Visina gume kao String.
+	 * 
+	 * 
+	 * @throws java.lang.IllegalArgumentException Ako je uneta visina manja od 25 ili veca od 95.
+	 */
 	public void setVisina(int visina) {
 
 		if (visina < 25 || visina > 95)
@@ -93,9 +176,11 @@ public class AutoGuma {
 		this.visina = visina;
 
 	}
-
+	
+	/**
+	 * Vraca String sa svim podacima o gumi.
+	 */
 	@Override
-
 	public String toString() {
 
 		return "AutoGuma [markaModel=" + markaModel + ", precnik=" + precnik +
@@ -103,9 +188,19 @@ public class AutoGuma {
 				", sirina=" + sirina + ", visina=" + visina + "]";
 
 	}
-
+	
+	/**
+	 * Poredi dve gume i vraca true ako su iste, a false ako su razlicite.
+	 * 
+	 * Gume se porede po modelu i marki, profilu, sirini i visini i svi moraju da budu isti.
+	 * 
+	 * @return 
+	 * <ul>
+	 * 		<li>true ako su oba objekta klase AutoGuma i imaju istu marku i model, isti profil, visinu i sirinu</li>
+	 * 		<li>false u svim ostalim slucajevima</li>
+	 * </ul>
+	 */
 	@Override
-
 	public boolean equals(Object obj) {
 
 		if (this == obj)
