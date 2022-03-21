@@ -72,8 +72,8 @@ class AutoGumaTest {
 	@Test
 	@DisplayName("Testira za normalan unos za precnik")
 	void testSetPrecnik() {
-		a.setPrecnik(10);
-		assertEquals(10, a.getPrecnik());
+		a.setPrecnik(15);
+		assertEquals(15, a.getPrecnik());
 	}
 	@ParameterizedTest
 	@CsvSource({
@@ -92,8 +92,8 @@ class AutoGumaTest {
 	@DisplayName("Testira za normalan unos za sirinu")
 	void testSetSirina() {
 		
-		a.setSirina(120);
-		assertEquals(120, a.getSirina());
+		a.setSirina(150);
+		assertEquals(150, a.getSirina());
 	}
 	
 	@ParameterizedTest
