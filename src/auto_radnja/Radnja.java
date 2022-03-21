@@ -16,8 +16,8 @@ public interface Radnja {
 	 * Dodaje novu gumu na listu guma u radnju
 	 * 
 	 * @param a Guma kao instanca klase AutoGuma
-	 * @throws java.lang.NullPointerException.class Ako je uneta guma null
-	 * @throws java.lang.RuntimeException.class Ako guma vec postoji u radnji (listi guma)
+	 * @throws java.lang.NullPointerException Ako je uneta guma null
+	 * @throws java.lang.RuntimeException Ako guma vec postoji u radnji (listi guma)
 	 */
 	void dodajGumu(AutoGuma a);
 	
