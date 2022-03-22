@@ -2,7 +2,7 @@ package auto_radnja;
 
 import java.util.List;
 import auto_radnja.gume.AutoGuma;
-import java.lang.*;
+
 
 /**
  * Interfejs koji deklarise metoda za rad sa objektima klase AutoGuma

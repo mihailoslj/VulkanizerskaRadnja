@@ -47,11 +47,8 @@ public class AutoGuma {
 		super();
 
 		setMarkaModel(markaModel);
-
 		setPrecnik(precnik);
-
 		setSirina(sirina);
-
 		setVisina(visina);
 	}
 
@@ -77,14 +74,10 @@ public class AutoGuma {
 	public void setMarkaModel(String markaModel) {
 
 		if (markaModel == null)
-
 			throw new NullPointerException("Morate uneti marku i model");
 
 		if (markaModel.length()<3)
-
-			throw new IllegalArgumentException
-
-			("Marka i model moraju sadrzati bar 3 znaka");
+			throw new IllegalArgumentException("Marka i model moraju sadrzati bar 3 znaka");
 
 		this.markaModel = markaModel;
 
@@ -112,7 +105,6 @@ public class AutoGuma {
 	public void setPrecnik(int precnik) {
 
 		if (precnik > 22 || precnik < 13)
-
 			throw new IllegalArgumentException("Precnik van opsega");
 
 		this.precnik = precnik;
@@ -141,7 +133,6 @@ public class AutoGuma {
 	public void setSirina(int sirina) {
 
 		if (sirina > 355 || sirina < 135)
-
 			throw new IllegalArgumentException("Sirina van opsega");
 
 		this.sirina = sirina;
@@ -170,7 +161,6 @@ public class AutoGuma {
 	public void setVisina(int visina) {
 
 		if (visina > 95 || visina < 25)
-
 			throw new IllegalArgumentException("Visina van opsega");
 
 		this.visina = visina;
@@ -184,7 +174,6 @@ public class AutoGuma {
 	public String toString() {
 
 		return "AutoGuma [markaModel=" + markaModel + ", precnik=" + precnik +
-
 				", sirina=" + sirina + ", visina=" + visina + "]";
 
 	}
@@ -204,41 +193,32 @@ public class AutoGuma {
 	public boolean equals(Object obj) {
 
 		if (this == obj)
-
 			return true;
 
 		if (obj == null)
-
 			return false;
 
 		if (getClass() != obj.getClass())
-
 			return false;
 
 		AutoGuma other = (AutoGuma) obj;
 
 		if (markaModel == null) {
-
 			if (other.markaModel != null)
-
 				return false;
 
 		} else if (!markaModel.equals(other.markaModel))
-
 			return false;
 
 		if (precnik != other.precnik)
-
 			return false;
 
 		if (sirina != other.sirina)
-
 			return false;
 
 		if (visina != other.visina)
-
 			return false;
-
+		
 		return true;
 
 	}
